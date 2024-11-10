@@ -15,7 +15,7 @@ def exchange():
             data = response.json()
             if code in data['rates']:
                 exchange_rate = data['rates'][code]
-                mb.showinfo('Курс обмена',f'Курс: {exchange_rate}{code} за 1 доллар США')
+                mb.showinfo('Курс обмена',f'Курс: {exchange_rate:.2f}{code} за 1 доллар США')
             else:
                 mb.showerror('Ошибка!',f'Валюта {code} не найдена!')
         except Exception as e:
